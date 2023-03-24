@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
+const {renderLicenseBadge, renderLicenseLink} = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 // constant containing the questions
@@ -45,7 +46,7 @@ const questions = [
         type: 'list', 
         name: 'license',   
         message: 'Which license are you using for your project?',
-        choices: ['Apache', 'MIT', 'BSD', 'GNU', 'Unlicensed']
+        choices: ['Apache', 'MIT', 'BSD', 'GNU']
     },  
 
     {
@@ -66,41 +67,42 @@ const generateReadme = data => {
     const {title, description, installation, usage, contribution, test, license, github, email} = data;
     
     const readme = `
-    # ${title}
+# ${title} ${renderLicenseBadge(license)}
         
-    ## Description
-    ${description}
+## Description
+${description}
 
-    ## Table of Contents
-    - [Installation](#installation)
+## Table of Contents
+* [Installation](#installation)
 
-    - [Usage](#usage)
+* [Usage](#usage)
 
-    - [Contributing](#contribution)
+* [Contribution](#contribution)
 
-    - [Tests](#tests)
+* [Tests](#tests)
 
-    - [License](#license)
+* [License](#license)
 
     
-    ## Installation
-    ${installation}
+## Installation
+${installation}
 
-    ## Usage
-    ${usage}
+## Usage
+${usage}
 
-    ## Testing this app
-    ${test}
+## Testing this app
+${test}
 
-    ## Contributing
-    ${contribution}
+## Contribution
+${contribution}
 
-    ## License
-    This project uses the ${license} license. 
+## License
+This project uses the ${license} license. 
+${renderLicenseLink(license)}
 
-    ## Questions
-    For any quesitions regarding this project, please see my Github at ${github} or email me at ${email}. 
-    `;
+## Questions
+For any quesitions regarding this project, please see my Github at ${github} or email me at ${email}. 
+`;
     fs.writeFile('README.md', readme, (err) =>
         err ? console.error(err) : console.log('README.md successfully created!')
         );
