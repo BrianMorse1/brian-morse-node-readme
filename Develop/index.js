@@ -79,7 +79,7 @@ ${description}
 
 * [Contribution](#contribution)
 
-* [Tests](#tests)
+* [Test](#test)
 
 * [License](#license)
 
@@ -90,7 +90,7 @@ ${installation}
 ## Usage
 ${usage}
 
-## Testing this app
+## Test
 ${test}
 
 ## Contribution
