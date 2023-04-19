@@ -1,8 +1,8 @@
 
-# README generator ![](https://img.shields.io/badge/License:-MIT-lightgrey)
+# Content Management System ![](https://img.shields.io/badge/License:-MIT-lightgrey)
         
 ## Description
-This project creates a professional README file by taking CLI and transferring it to pre-formatted Markdown. 
+This system allows the user to view tables of data regarding the number of departments, roles, employees and more within their organization. The user can add new departments, roles, and employees to their database through the app.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -17,13 +17,13 @@ This project creates a professional README file by taking CLI and transferring i
 
     
 ## Installation
-To install and use the app, copy the repository locally, navigate to the correct directory in the terminal, and type 'node index.js'. 
+Clone the github repo listed later in this README and run the index.js file through node.
 
 ## Usage
-This project is intended to be used to save time while producing quality README files for coding projects. 
+To manage personnel, roles and salaries within their organization. 
 
 ## Test
-No tests are necessary for this project. 
+There are no test instructions for this project.
 
 ## Contribution
 No contributions are being accepted for this project. 
@@ -33,4 +33,4 @@ This project uses the MIT license.
 [MIT](./LICENSE)
 
 ## Questions
-For any quesitions regarding this project, please see my Github at github.com/BrianMorse1 or email me at Brian.P.Morse@gmail.com. The video showing functionality of this project is located here: https://drive.google.com/file/d/1dxPwGO62M1nrkh3QzCE4U-NYGhJ0ER8_/view . 
+For any quesitions regarding this project, please see my Github at https://github.com/BrianMorse1/brian-morse-content-management-system or email me at Brian.P.Morse@gmail.com. 
